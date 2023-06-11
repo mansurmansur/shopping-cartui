@@ -1,38 +1,104 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cart-container{
   display: flex;
   flex-direction: column;
+  background-color: white;
+  width: 80%;
+  height: 60%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px lightgray;
+  /* overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-margin-block-start: 2px;
+  scrollbar-gutter: 5px;
+  scrollbar-width: thin; */
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
+}
+.about{
+  align-self: flex-start;
+  padding-top: 10px ;
+}
+.about h2, .price h2{
+  margin: 0;
+  padding-top: 0 ;
+}
+.about h4{
+  font-size: 12px;
+  color: gray;
+  margin: 0 0 10px 0;
+}
+.img-box img{
+  width: 60px;
+  height: 100%;
+}
+.icon{
+  width: 20px;
+  height: 20px;
+}
+.counter{
+  display: flex;
+  align-self: center;
+}
+.counter-value{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+}
+.btn-increase, .btn-decrease{
+  background-color: lightgray;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+.price{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.text-button{
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  text-decoration: underline;
+  display: block;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.text-button:hover{
+  opacity: .7;
+}
+.remove{
+  color: rgba(255, 0, 0, 0.599);
+}
+.save{
+  color: rgb(47, 168, 243);
+  margin: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+@media (min-width: 700px) {
+  .cart-container{
+    width: 60%;
   }
 }
